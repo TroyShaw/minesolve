@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import minesweeper.Gui.Initiable;
-import minesweeper.Gui.gameImages.BoardImage;
-import minesweeper.Gui.gameImages.ButtonImage;
-import minesweeper.Gui.gameImages.MainImage;
 import minesweeper.game.Minesweeper;
 import minesweeper.game.MinesweeperListener;
 import minesweeper.game.Piece;
 import minesweeper.game.Square;
+import minesweeper.gui.Initiable;
+import minesweeper.gui.gameImages.BoardImage;
+import minesweeper.gui.gameImages.ButtonImage;
+import minesweeper.gui.gameImages.MainImage;
 import minesweeper.images.ImageData;
 import minesweeper.images.InvalidDimensionException;
 import minesweeper.images.NotImageException;

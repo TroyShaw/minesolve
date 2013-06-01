@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.gui;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -6,8 +6,8 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.SwingUtilities;
 
-import minesweeper.Gui.gameImages.BoardImage;
-import minesweeper.Gui.gameImages.ButtonImage;
+import minesweeper.gui.gameImages.BoardImage;
+import minesweeper.gui.gameImages.ButtonImage;
 
 public class MouseManager implements MouseMotionListener, MouseListener {
 

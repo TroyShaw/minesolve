@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.gui;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -8,9 +8,9 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
-import minesweeper.Gui.gameImages.BoardImage;
-import minesweeper.Gui.gameImages.ButtonImage;
-import minesweeper.Gui.gameImages.MainImage;
+import minesweeper.gui.gameImages.BoardImage;
+import minesweeper.gui.gameImages.ButtonImage;
+import minesweeper.gui.gameImages.MainImage;
 
 public class GamePanel extends JPanel {
 

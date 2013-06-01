@@ -1,4 +1,4 @@
-package minesweeper.Gui.gameImages;
+package minesweeper.gui.gameImages;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;

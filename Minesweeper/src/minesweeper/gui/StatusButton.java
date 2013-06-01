@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.gui;
 
 import java.awt.Dimension;
 import java.awt.Graphics;

@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.gui;
 
 /**
  * Signals that this object is capable of starting a new Minesweeper game.
