@@ -1,6 +1,6 @@
 package minesweeper.game;
 
-import minesweeper.Controller.MinesweeperTimer;
+import minesweeper.controller.MinesweeperTimer;
 import minesweeper.solver.Solver;
 
 /**

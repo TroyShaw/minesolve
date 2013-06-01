@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.Map;
 
-import minesweeper.Controller.GuiController;
+import minesweeper.controller.GuiController;
 import minesweeper.game.Piece;
 import minesweeper.game.Square;
 import minesweeper.images.ImageData;

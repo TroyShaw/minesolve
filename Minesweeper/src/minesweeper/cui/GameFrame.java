@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.cui;
 
 import java.awt.Dimension;
 import java.awt.Image;
@@ -7,7 +7,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
-import minesweeper.Controller.GuiController;
+import minesweeper.controller.GuiController;
 import minesweeper.game.GameConstants;
 import minesweeper.images.ImageData;
 

@@ -1,4 +1,4 @@
-package minesweeper.Gui;
+package minesweeper.cui;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

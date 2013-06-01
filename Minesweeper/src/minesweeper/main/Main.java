@@ -1,6 +1,6 @@
 package minesweeper.main;
 
-import minesweeper.Gui.GameFrame;
+import minesweeper.cui.GameFrame;
 
 public class Main {
 

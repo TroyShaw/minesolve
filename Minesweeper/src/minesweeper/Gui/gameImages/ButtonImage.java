@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
-import minesweeper.Controller.GuiController;
+import minesweeper.controller.GuiController;
 import minesweeper.images.ImageData;
 
 public class ButtonImage extends GameImage {
