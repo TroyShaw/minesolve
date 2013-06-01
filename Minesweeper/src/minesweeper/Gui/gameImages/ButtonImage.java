@@ -9,7 +9,7 @@ import minesweeper.images.ImageData;
 
 public class ButtonImage extends GameImage {
 
-	private boolean mousePressed, mouseContained, clickedInside, dirty;
+	private boolean mousePressed, mouseContained, clickedInside;
 	private State state;
 
 	private BufferedImage buttonImage;
@@ -57,6 +57,11 @@ public class ButtonImage extends GameImage {
 		//empty since directly access variables
 	}
 
+	/**
+	 * Signals that the mouse has moved.
+	 * @param x
+	 * @param y
+	 */
 	public void mouseMoved(int x, int y) {
 //		if (mouseContained != bounds.contains(x, y)) {
 //			mouseContained = !mouseContained;

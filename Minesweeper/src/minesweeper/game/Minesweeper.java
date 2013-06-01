@@ -1,12 +1,6 @@
 package minesweeper.game;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import javax.sound.midi.ControllerEventListener;
-
 import minesweeper.Controller.MinesweeperTimer;
-import minesweeper.Controller.Statistics;
 import minesweeper.solver.Solver;
 
 /**

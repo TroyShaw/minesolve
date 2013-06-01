@@ -11,11 +11,15 @@ import minesweeper.Gui.gameImages.ButtonImage;
 
 public class MouseManager implements MouseMotionListener, MouseListener {
 
+	@SuppressWarnings("unused")
 	private ButtonImage buttonImage;
+	@SuppressWarnings("unused")
 	private BoardImage boardImage;
 	
+	@SuppressWarnings("unused")
 	private boolean left, right;
 	
+	@SuppressWarnings("unused")
 	private ClickMode clickMode;
 	
 	public MouseManager(ButtonImage buttonImage, BoardImage boardImage) {
@@ -25,8 +29,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;
@@ -42,9 +44,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;
@@ -60,9 +59,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;
@@ -78,9 +74,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;
@@ -96,9 +89,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;
@@ -114,9 +104,6 @@ public class MouseManager implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		
 		switch (ClickMode.getClickMode(e)) {
 		case both:
 			break;

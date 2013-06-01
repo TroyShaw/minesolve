@@ -6,8 +6,6 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-import minesweeper.Controller.GuiController;
-import minesweeper.Gui.gameImages.*;
 import minesweeper.images.ImageData;
 
 /**
@@ -28,15 +26,11 @@ public class MainImage extends GameImage {
 	private BufferedImage thisImage;
 
 	private JPanel parent;
-	private GuiController controller;
 
-	private int width, height, numMines;
+	private int numMines;
 
 	public MainImage(JPanel parent, int width, int height, int numMines) {
 		this.parent = parent;
-
-		this.width = width;
-		this.height = height;
 		this.numMines = numMines;
 
 		timerImage = new NumberImage();
@@ -68,8 +62,6 @@ public class MainImage extends GameImage {
 	}
 
 	public void resetBoard(int width, int height, int numMines) {
-		this.width = width;
-		this.height = height;
 		this.numMines = numMines;
 
 		buttonImage.setDefault();

@@ -220,12 +220,19 @@ public class BoardImage extends GameImage {
 	}
 
 	
+	/**
+	 * Signals that the mouse has entered this image.
+	 * @param e
+	 */
 	public void mouseEntered(MouseEvent e) {
 		onScreen = true;
 		//repaint();
 	}
 
-	
+	/**
+	 * Signals that the mouse has exited this image.
+	 * @param e
+	 */
 	public void mouseExited(MouseEvent e) {
 		onScreen = false;
 		//repaint();

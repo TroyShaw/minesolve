@@ -17,7 +17,7 @@ public class Solver {
 
 	private boolean solving, changed;
 
-	private boolean flagAvailable, clickAvailable;
+	private boolean  clickAvailable;
 
 	public Solver(Board board, MinesweeperListener listener, Minesweeper game) {
 		this.board = board;
@@ -36,6 +36,7 @@ public class Solver {
 
 		//solve
 		new Thread() {
+			@Override
 			public void run() {
 				changed = false;
 
@@ -132,6 +133,7 @@ public class Solver {
 	 * Does a double-press on squares which have as many adjacent flags as mines.
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private boolean clickSatisfied(int i, int j) {
 		Square s = squares[i][j];
 
@@ -155,8 +157,10 @@ public class Solver {
 		return solving;
 	}
 
+	@SuppressWarnings("unused")
 	private class InternalSolver extends Thread {
 
+		@Override
 		public void run() {
 			boolean changed = false;
 

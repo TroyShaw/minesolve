@@ -4,9 +4,7 @@ import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 
-import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 import minesweeper.Controller.GuiController;
