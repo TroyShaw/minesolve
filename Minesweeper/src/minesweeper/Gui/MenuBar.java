@@ -1,4 +1,4 @@
-package minesweeper.cui;
+package minesweeper.Gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

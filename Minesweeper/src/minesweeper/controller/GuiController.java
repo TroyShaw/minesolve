@@ -8,10 +8,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import minesweeper.Gui.Initiable;
 import minesweeper.Gui.gameImages.BoardImage;
 import minesweeper.Gui.gameImages.ButtonImage;
 import minesweeper.Gui.gameImages.MainImage;
-import minesweeper.cui.Initiable;
 import minesweeper.game.Minesweeper;
 import minesweeper.game.MinesweeperListener;
 import minesweeper.game.Piece;

@@ -1,4 +1,4 @@
-package minesweeper.cui;
+package minesweeper.Gui;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
