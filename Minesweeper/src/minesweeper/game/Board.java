@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class Board {
 
 	private int width, height, numMines;
@@ -17,11 +16,9 @@ public class Board {
 	/**
 	 * Creates a new unpopulated minesweeper board. 
 	 * 
-	 * @param width
-	 * @param height
-	 * @param numMines
-	 * @param x
-	 * @param y
+	 * @param width the width of the board
+	 * @param height the height of the board
+	 * @param numMines the number of mines
 	 */
 	public Board(int width, int height, int numMines) {
 		this.width = width;
@@ -39,8 +36,8 @@ public class Board {
 
 	/**
 	 * Populates the board with the given square guaranteed to be a non-mine.
-	 * @param x
-	 * @param y
+	 * @param xSafe the x coordinate that should not contain a mine
+	 * @param ySafe the y coordinate that should not contain a mine
 	 */
 	public void populateBoard(int xSafe, int ySafe) {
 		if (populated) return;
@@ -95,7 +92,8 @@ public class Board {
 
 	/**
 	 * Returns if this board has been populated.
-	 * @return
+	 *
+	 * @return true if populated, false otherwise
 	 */
 	public boolean isPopulated() {
 		return populated;
@@ -110,10 +108,11 @@ public class Board {
 	}
 
 	/**
-	 * Returns true if the square is a valid position on the board, that is within the bounds of the board. 
-	 * @param x
-	 * @param y
-	 * @return
+	 * Returns true if the square is a valid position on the board, that is within the bounds of the board.
+	 *
+	 * @param x the x coordinate
+	 * @param y the y coordinate
+	 * @return true if the coordinate is in the bounds of the board, false otherwise
 	 */
 	public boolean positionExists(int x, int y) {
 		return x >= 0 && y >= 0 && x < width && y < height;
@@ -173,6 +172,7 @@ public class Board {
 	/**
 	 * Returns the number of unsatisfied mines left for this square.
 	 * The number of unsatisfied mines is numMines - adjacentFlags.
+	 *
 	 * @param i
 	 * @return
 	 */
@@ -205,6 +205,4 @@ public class Board {
 
 		return false;
 	}
-	
-	
 }

@@ -41,11 +41,7 @@ public class GuiController implements MinesweeperListener, Initiable {
 	private JPanel panel;
 	
 	private Solver solver;
-	
-	public GuiController() {
-		
-	}
-	
+
 	public GuiController(JFrame frame, JPanel panel) {
 		this.frame = frame;
 		this.panel = panel;
@@ -72,16 +68,17 @@ public class GuiController implements MinesweeperListener, Initiable {
 
 	/**
 	 * Starts a new game with the given parameters.
-	 * @param width
-	 * @param height
-	 * @param numMines
+	 *
+	 * @param width the width of the board
+	 * @param height the height of the board
+	 * @param numMines the number of mines the game will have
 	 */
 	public void newGame(int width, int height, int numMines) {
 		this.width = width;
 		this.height = height;
 		this.numMines = numMines;
 		
-		//call normal newgame method
+		//call normal new-game method
 		newGame();
 		
 		//reset our frames size and redraw

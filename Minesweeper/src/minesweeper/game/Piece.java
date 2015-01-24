@@ -24,8 +24,9 @@ public enum Piece {
 	/**
 	 * Returns a non-mine square with the given number of surrounding pieces.
 	 * Returns null if out of range of 0-8.
-	 * @param numMines
-	 * @return
+	 *
+	 * @param numMines the number of mines
+	 * @return the appropriate enum value, or null
 	 */
 	public static Piece getPiece(int numMines) {
 		switch (numMines) {

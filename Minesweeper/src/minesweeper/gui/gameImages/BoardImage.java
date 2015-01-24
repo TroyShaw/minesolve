@@ -68,8 +68,9 @@ public class BoardImage extends GameImage {
 	
 	/**
 	 * Sets the boards size to the given params, creates a new image at the given size, then draws a blank board at new size.
-	 * @param x
-	 * @param y
+	 *
+	 * @param width the new width
+	 * @param height the new height
 	 */
 	public void resetBoard(int width, int height) {
 		this.width = width;
@@ -152,8 +153,6 @@ public class BoardImage extends GameImage {
 
 		xClick = (e.getX() - getX()) / squareSize;
 		yClick = (e.getY() - getY()) / squareSize;
-
-		
 		
 		//double press mode
 		if ((left && rightClicked) || (right && leftClicked)) {

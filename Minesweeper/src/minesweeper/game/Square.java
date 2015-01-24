@@ -2,7 +2,6 @@ package minesweeper.game;
 
 import java.awt.Point;
 
-
 /**
  * Class represents a minesweeper square on the board
  * @author Troy Shaw
@@ -158,5 +157,5 @@ public class Square {
 		return y;
 	}
 	
-	public enum State {unmarked, flagged, questioned};
+	public enum State {unmarked, flagged, questioned}
 }

@@ -38,7 +38,7 @@ public class MinePanel extends JPanel{
 	 */
 	private Map<Piece, BufferedImage> images = ImageData.getBoardPieces();
 	/**
-	 * Image of the two squares which have depressed images. (blank and questionmark)
+	 * Image of the two squares which have depressed images. (blank and question-mark)
 	 */
 	private Map<Piece, BufferedImage> depressedImages = ImageData.getDepressedBoardPieces();
 

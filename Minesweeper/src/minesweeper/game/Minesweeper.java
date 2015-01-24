@@ -6,7 +6,7 @@ import minesweeper.solver.Solver;
 /**
  * Represents a single game of Minesweeper. 
  * The game begins in a non-populated state until a first click is made.
- * The first square clicked is guareteed to be non-mine.
+ * The first square clicked is guaranteed to be non-mine.
  * The game then continues until either all non-mines are revealed, or a single mine is revealed.
  *
  * @author Troy Shaw
@@ -38,7 +38,7 @@ public class Minesweeper {
 	private int minesUnflagged, unclickedNonmines;
 
 	/**
-	 * Creates a new minesweeper game with the given paramaters. <p>
+	 * Creates a new minesweeper game with the given parameters. <p>
 	 * Width and height must be greater than 0.<br>
 	 * Mines must be greater than 0 and less then width * height.
 	 * 
@@ -46,7 +46,7 @@ public class Minesweeper {
 	 * @param height the height of the board
 	 * @param numMines number of mines
 	 * @param listener the listener object notified during gameplay
-	 * @throws InvalidArgumentException if mines < 0 or mines > width * height
+	 * @throws IllegalArgumentException if mines < 0 or mines > width * height
 	 */
 	public Minesweeper(int width, int height, int numMines, MinesweeperListener listener){
 		if (width < 0 || height < 0) throw new IllegalArgumentException("Board dimension must be greater than 0");
@@ -137,8 +137,8 @@ public class Minesweeper {
 	 * Does a "double-click" move.
 	 * A square must be revealed, be a non-mine, and be surrounded by the same number of flags as it has adjacent mines.
 	 * 
-	 * @param x
-	 * @param y
+	 * @param x the x coordinate
+	 * @param y the y coordinate
 	 */
 	public void revealSurrounding(int x, int y) {
 		if (!board.positionExists(x, y)) return;
@@ -164,8 +164,8 @@ public class Minesweeper {
 	 * If the square is unrevealed and not flagged, it becomes flagged.
 	 * If the square is revealed, nothing happens.
 	 * 
-	 * @param x
-	 * @param y
+	 * @param x the x coordinate
+	 * @param y the y coordinate
 	 */
 	public void toggleSquare(int x, int y) {
 
@@ -203,8 +203,8 @@ public class Minesweeper {
 	/**
 	 * Sets the current square as a flag.
 	 * 
-	 * @param x
-	 * @param y
+	 * @param x the x coordinate
+	 * @param y the y coordinate
 	 */
 	public void setFlagged(int x, int y) {
 		//first check we are are allowed to make a move 
@@ -227,9 +227,10 @@ public class Minesweeper {
 
 	/**
 	 * Returns true if the position exists and the game isn't over.
-	 * @param x
-	 * @param y
-	 * @return
+	 *
+	 * @param x the x coordinate
+	 * @param y the y coordinate
+	 * @return true if the move is valid, false otherwise
 	 */
 	private boolean checkValidMove(int x, int y) {
 		return board.positionExists(x, y) && !gameFinished;
@@ -239,8 +240,9 @@ public class Minesweeper {
 	 * Helper method to recursively click squares with no adjacent mines.
 	 * If a square has no adjacent mines, it is clicked and all adjacent squares are recursively clicked.
 	 * If a square has any number of adjacent mines, it is clicked and then the recursion stops.
-	 * @param x
-	 * @param y
+	 *
+	 * @param x the x coordinate
+	 * @param y the y coordinate
 	 */
 	private void recurseClick(int x, int y) {
 		Square square = board.getSquare(x, y);
@@ -266,8 +268,9 @@ public class Minesweeper {
 	/**
 	 * Causes the screen to display the mines and incorrect flagged squares.
 	 * Will not redraw the given square.
-	 * @param x
-	 * @param y
+	 *
+	 * @param x the x coordinate
+	 * @param y the y coordinate
 	 */
 	private void initiateLoseSequence(int x, int y) {
 		timer.cancel();
@@ -333,8 +336,10 @@ public class Minesweeper {
 	}
 
 	/**
-	 * Returns true if the player has won or died, false otherwise.
-	 * @return
+	 * Checks if the game has finished.
+	 * The game is over if the player has won, or the player clicked a mine.
+	 *
+	 * @return true if the player has won or died, false otherwise.
 	 */
 	public boolean isGameFinished() {
 		return hasWon() || hasDied();
@@ -342,6 +347,7 @@ public class Minesweeper {
 	
 	/**
 	 * Returns true if the game has been lost (a mine has been clicked).
+	 *
 	 * @return true if they have lost
 	 */
 	public boolean hasDied() {

@@ -39,12 +39,12 @@ public class ImageData {
 	/**
 	 * The directory the images are contained in within the jar file.
 	 */
-	private static String directory = "/Images/";
+	private static String DIRECTORY = "/Images/";
 
 	/**
 	 * The default images location.
 	 */
-	private static String defaultImage = "cloneskin.bmp";
+	private static String DEFAULT_IMAGE = "cloneskin.bmp";
 
 	/**
 	 * The timers images. 
@@ -109,7 +109,7 @@ public class ImageData {
 	 */
 	public static void loadDefaultImages() {
 		try {
-			splitImage(ImageIO.read(ImageIO.class.getResource(directory + defaultImage)));
+			splitImage(ImageIO.read(ImageIO.class.getResource(DIRECTORY + DEFAULT_IMAGE)));
 		} catch (IOException e) {
 			throw new Error("default image caused an IO error");
 		}
@@ -118,7 +118,8 @@ public class ImageData {
 	/**
 	 * Splits the image in the supplied path and sets the images used by the game. <p>
 	 * The image must be of size (x, y) or InvalidDimensionException will be thrown.
-	 * @param path
+	 *
+	 * @param file the image file to load
 	 * @throws InvalidDimensionException
 	 * @throws NotImageException
 	 * @throws IOException

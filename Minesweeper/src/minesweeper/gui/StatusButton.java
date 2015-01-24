@@ -144,5 +144,5 @@ public class StatusButton extends JPanel {
 	 * @author Troy Shaw
 	 *
 	 */
-	private enum State {nonDead, fieldClick, dead, win, depress};
+	private enum State {nonDead, fieldClick, dead, win, depress}
 }

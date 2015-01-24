@@ -17,8 +17,6 @@ public class Solver {
 
 	private boolean solving, changed;
 
-	private boolean  clickAvailable;
-
 	public Solver(Board board, MinesweeperListener listener, Minesweeper game) {
 		this.board = board;
 		this.game = game;
@@ -131,6 +129,7 @@ public class Solver {
 
 	/**
 	 * Does a double-press on squares which have as many adjacent flags as mines.
+	 *
 	 * @return
 	 */
 	@SuppressWarnings("unused")
@@ -167,9 +166,6 @@ public class Solver {
 			for (int i = 0; i < squares.length; i++) {
 				for (int j = 0; j < squares[i].length; j++) {
 
-					if (clickAvailable) {
-						//changed = changed || 
-					} //else if ()
 				}
 
 			}

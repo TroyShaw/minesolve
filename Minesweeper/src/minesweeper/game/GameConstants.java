@@ -1,5 +1,8 @@
 package minesweeper.game;
 
+/**
+ * Holds constants used throughout the game.
+ */
 public class GameConstants {
 
 	public static final int EASY_WIDTH = 8;

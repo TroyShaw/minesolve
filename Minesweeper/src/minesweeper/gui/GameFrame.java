@@ -1,11 +1,9 @@
 package minesweeper.gui;
 
 import java.awt.Dimension;
-import java.awt.Image;
 import java.awt.Toolkit;
 
-import javax.swing.JFrame;
-import javax.swing.UIManager;
+import javax.swing.*;
 
 import minesweeper.controller.GuiController;
 import minesweeper.game.GameConstants;
@@ -21,7 +19,10 @@ public class GameFrame extends JFrame {
 
 	public GameFrame() {
 		super("Troysweeper");
-		setNativeLAndF();	//needs to be called first to have any effect
+
+		//needs to be called first to have any effect
+		setNativeLAndF();
+
 		setIcon();
 
 		//load images first so components have images to use
@@ -35,17 +36,13 @@ public class GameFrame extends JFrame {
 		//add objects to this frame
 		setupLayout();
 
-		//initial draw
-
-		
 		//house keeping
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setResizable(false);
 		pack();
 		center();
 		setVisible(true);
 	}
-
 	
 	private void initializeMenuBar() {
 		menuBar = new MenuBar();
@@ -72,17 +69,8 @@ public class GameFrame extends JFrame {
 	}
 
 	private void setupLayout() {
-		//getContentPane().setLayout(null);
-//		JPanel masterPanel = new JPanel();
-//		masterPanel.setLayout(new BoxLayout(masterPanel, BoxLayout.Y_AXIS));
-		
-		//masterPanel.add(gamePanel);
-		
 		getContentPane().add(gamePanel);
-		
-		//getContentPane().setPreferredSize(gamePanel.getSize());
 	}
-
 	
 	/**
 	 * Sets the look and feel of the GUI to the current systems Look and feel.
@@ -93,6 +81,7 @@ public class GameFrame extends JFrame {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (Exception e) {
 			//do nothing. It will default to normal
+			e.printStackTrace();
 		}
 	}
 
@@ -100,9 +89,7 @@ public class GameFrame extends JFrame {
 	 * Method sets the icon to the minesweeper icon.
 	 */
 	private void setIcon() {
-		Image icon = ImageData.getIconImage();
-
-		setIconImage(icon);
+		setIconImage(ImageData.getIconImage());
 	}
 
 	/**
@@ -112,13 +99,13 @@ public class GameFrame extends JFrame {
 		//set to center of screen
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
-		// Determine the new location of the window
+		//determine the new location of the window
 		int w = getSize().width;
 		int h = getSize().height;
 		int x = (dim.width - w) / 2;
 		int y = (dim.height - h) / 2;
 
-		// Move the window
+		//move the window
 		setLocation(x, y);
 	}
 }

@@ -35,7 +35,7 @@ public class ButtonImage extends GameImage {
 	@Override
 	public void redraw() {
 		Graphics2D g = buttonImage.createGraphics();
-		BufferedImage i = null;
+		BufferedImage i;
 		
 		if (clickedInside && mouseContained) i = ImageData.buttonDepress;
 		else if (state == State.dead) i = ImageData.buttonDead;
@@ -132,5 +132,5 @@ public class ButtonImage extends GameImage {
 	 * @author Troy Shaw
 	 *
 	 */
-	private enum State {nonDead, dead, win, depress};
+	private enum State {nonDead, dead, win, depress}
 }

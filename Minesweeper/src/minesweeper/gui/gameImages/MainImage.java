@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import minesweeper.images.ImageData;
 
 /**
- * Reprensents the main image of the game. This acts as a "container" for the border images, the main board, the mines left
+ * Represents the main image of the game. This acts as a "container" for the border images, the main board, the mines left
  * image, the timer image and the button image. Clicks are deferred through this class to the board and button. <p>
  * 
  * The components draw themselves onto this component, then this image is returned to be drawn.
