@@ -1,0 +1,34 @@
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+[][][]
+[][][]
+[][][]
+
+
+
+if a position x has only 2 adjacent non clicked squares i, j, and needs 1 more mine and 
+if an adjacent square y to x is also adjacent to i, j ...
+	if y.adjacentFlags + 1 = numBombs, click adjacent squares that aren't i, j
+	else if numMines - y.adjacentFlags + 1 = adjacent squares that aren't i, j, flag them.

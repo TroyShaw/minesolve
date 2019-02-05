@@ -1,0 +1,5 @@
+single press mode:
+if on a non-clicked blank square or a non-clicked question mark square, have it pressed, otherwise do nothing
+
+double press-mode:
+same as single-press mode but for all surrounding squares.

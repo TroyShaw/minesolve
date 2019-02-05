@@ -1,0 +1,35 @@
+This document describes the design of the MineSweeper game.
+
+
+
+
+Packages
+=========
+
+
+highscore
+---------
+
+This class handles all the code related to highscores.
+TODO
+
+
+images
+------
+
+This package contains code related to loading the image assets used by the GUI.
+
+This version of minesweeper uses a single sprite-sheet which contains the graphics for everything.
+The ImageData class basically extracts all of the subimages from the main spritesheet and makes them accessible.
+The class also allows loading of new skins at runtime. 
+
+
+
+main
+----
+
+Simply instantiates a GameFrame, which starts a new game of minesweeper.
+
+
+solver
+------

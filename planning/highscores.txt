@@ -1,0 +1,22 @@
+read/ write highscore to disk
+    figure out format
+
+add new highscores
+
+set highscore on game win
+
+display highscore in a window
+
+add menu item to display highscore window
+
+
+
+HighscoreWindow
+
+
+HighscorePanel
+
+
+
+
+

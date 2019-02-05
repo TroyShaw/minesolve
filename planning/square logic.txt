@@ -1,0 +1,45 @@
+minepanel behaviour
+
+
+single depress mode:
+if over a blank square, depress it.
+if over a question mark, depress it
+
+press:
+
+any press - dirty = false
+
+
+left press when right + left is pressed does nothing
+left press when left is pressed does nothing
+
+left press when right is pressed enters double press mode
+
+
+left press when nothing pressed enters single depress mode
+
+
+right press when nothing pressed toggles current square
+right press when right pressed toggles current square
+right press when left pressed enters double press mode
+right press when left + right pressed does nothing
+
+
+release:
+
+after processing release - dirty = true
+
+left released when dirty does nothing
+right release when dirty does nothing
+
+left release when not dirty and single depress mode clicks square and exits mode
+right release when not dirty and single depress does nothing
+
+right release when double depress mode and not dirty does surround click and exits mode
+left release when double depress mode and not dirty does surround click and exits mode
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+fulfilled adjacent flags/ empty
+
+if a square isn't fully flagged
+	if all satisfying flag instances result in a flag being adjacent to a square which has empty squares (that aren't the same squares as those adjacent to original square) the same number as remaining flags, then we can flag those squares.
+	same as other except if a flag(s) is adjacent in all configurations and that flag then satisfies the square, we can click the squares that aren't the same squares as those adjacent to original square.
+
+click algorithms
+================
+if a square with x adjacent mines has x adjacent flags, we can safely click all adjacent empty squares
+
+
+flag algorithms
+===============
+if empty adjacent squares is same number as mines on square - number of adjacent flagged squares, we can flag remaining non-flagged squares.
+if we enumerate all possible flag permutations for a square, remove the ones that are illegal based of adjacent squares, then take the union of the remaining selections, the flags in the union can be safely flagged.

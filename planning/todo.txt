@@ -1,0 +1,15 @@
+Implement highscore system
+    records top 10 scores for 3 game modes: easy, medium, hard
+    if you beat a highscore when you win, it prompts for your name, then puts it in highscores
+    clicking the "highscore" menu item from the menu brings up a window displaying all highscores
+
+Implement proper solver
+    At the moment the solver is pretty ad-hoc and the file needs refactoring.
+    The solver itself also is pretty simple, and there are many rules which can be added which would be interesting.
+
+Fix solver/ game interface
+    At the moment there is flickering and weirdness with how the solver and the GUI interact.
+    This needs to be fixed.
+
+General tidyup and refactorings
+    There are lots of things that could be updated and fixed. These all need to be done.
